@@ -1,3 +1,35 @@
+/********************************************************************
+ File: 8puzzle.cpp
+ Purpose: This program creates a 3x3 board of boxes with numbers that will be moved around by the user until they are in numerical order.
+ Name: Quy Duc Do
+ Inputs: start, option
+ Outputs: box[][], counter
+ Functions:
+ 
+	randomgen () - Randomly generate numbers in the array for the board.
+        
+	blankspace() - Indentify the position of the empty box (0)
+ 
+	puzzle() - Print out the game board
+ 
+	winpuzzle() - Print out the winning game board (arranged order)
+	
+	errormove() - Check to ensure the exchanged box is not out of bound of the array/board
+ 
+	up () - Exchange the value of the empty box (0) with the one above it. Makes it appear if the blank moved upwards and update the board.
+ 
+	down () - Exchange the value of the empty box (0) with the one below it. Makes it appear if the blank moved downwards and update the board.
+ 
+	left () - Exchange the value of the empty box (0) with the one to the left of it. Makes it appear if the blank moved leftwards and update the board.
+ 
+	right () - Exchange the value of the empty box (0) with the one to the right it. Makes it appear if the blank moved rightwards and update the board.
+ 
+	falsemove() - Display the message of wrong command if a move other than up, down, left, and right (1 to 4) is chosen.
+	
+	winner() - Checker to see if the player has complepte the game or not.
+	
+ ********************************************************************/
+
 #include <iostream>
 #include <iomanip>
 #include <stdlib.h>
@@ -169,7 +201,7 @@ void left()
 void falsemove()
 {
 	system ("cls");
-	cout <<"\t\t\t"<<"Wrong move! Please choose again!"<<endl;
+	cout <<"\t\t\t"<<"Wrong command! Please choose again!"<<endl;
 	puzzle();
 	counter--;
 }
